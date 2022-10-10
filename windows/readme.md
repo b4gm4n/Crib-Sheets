@@ -2,10 +2,8 @@
 
 File Explorer
 
-Shirt + F10  - Right click menu
-
-Ctrl + L to select address bar
-
+Shirt + F10  - Right click menu  
+Ctrl + L to select address bar  
 Users startup folder
 
 `shell:startup`
