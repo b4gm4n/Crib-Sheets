@@ -5,12 +5,12 @@ Type | Description
 A|The record that holds the IP address of a domain.
 AAAA|The record that contains the IPv6 address for a domain (as opposed to A records, which list the IPv4 address).
 CNAME|Forwards one domain or subdomain to another domain, does NOT provide an IP address.
-MX|Directs mail to an email server.
-TXT|Lets an admin store text notes in the record. These records are often used for email security.
-NS|Stores the name server for a DNS entry.
-SOA|Stores admin information about a domain.
+MX|Lists the mail server(s).
+TXT|Text notes in the record. Typically domain authentication, email security(spf).
+NS|Lists the name server for the domainsa DNS entry.
+SOA|Start of Authority, important information about a domain or zone.
 SRV|Specifies a port for specific services.
-PTR|Provides a domain name in reverse-lookups.
+PTR|Pointer or reverse DNS Record,  lists the domain name allowing a reverse-lookup using the known ip address.
 
 ## Less commonly used DNS Records
 Type | Description
