@@ -7,9 +7,9 @@ AAAA|The record that contains the IPv6 address for a domain (as opposed to A rec
 CNAME|Forwards one domain or subdomain to another domain, does NOT provide an IP address.
 MX|Lists the mail server(s).
 TXT|Text notes in the record. Typically domain authentication, email security(spf).
-NS|Lists the name server for the domainsa DNS entry.
+NS|Lists the name server(s) for the domain.
 SOA|Start of Authority, important information about a domain or zone.
-SRV|Specifies a port for specific services.
+SRV|Specifies a port for specific services, such as SIP.
 PTR|Pointer or reverse DNS Record,  lists the domain name allowing a reverse-lookup using the known ip address.
 
 ## Less commonly used DNS Records
