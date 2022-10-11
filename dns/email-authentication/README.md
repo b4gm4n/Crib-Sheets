@@ -27,7 +27,7 @@ Microsoft `include:spf.protection.outlook.com` = `v=spf1 include:spf.protection.
 
  ### DKIM - DomainKeys Identified Mail
 This is a method of email authentication that helps prevent spammers impersonating the domain.
-DKIM uses a public key to authenticate where an email came from, that it actually came from a server that sends emails from that domain. A pair of cryptographic keys are used: a private key for the sender to sign messages with, and a public key for the receiver to verify signatures. A receiver cannot use the public key to sign messages, and vice versa.
+DKIM uses a public key to authenticate where an email came from, that it actually came from the server that sends emails for that domain. A pair of cryptographic keys are used: a private key for the sender to sign messages with, and a public key for the receiver to verify signatures.
 
 Each email will contain a DKIM header, which contains a digital signature. The receiving email server can check the DKIM DNS record, obtain the public key, and use the public key to verify the digital signature.
 
@@ -36,7 +36,7 @@ This process also ensures that the email has not been changed in transit. The di
 `[selector]._domainkey.[domain]`
 
  ### DMARC - Domain-based Message Authentication Reporting and Conformance
-A DMARC policy tells a receiving email server what to do after checking a domain's SPF and DKIM records, whether an email passes or fails SPF and DKIM, the DMARC policy determines if failure results in the email being marked as spam, getting blocked, or being delivered to its intended recipient.
+A DMARC policy tells a receiving email server what to do after checking a domain's SPF and DKIM records, whether an email passes or fails SPF and DKIM, the DMARC policy determines if the email will be blocked, marked as spam, or delivered to its intended recipient.
 
 A DMARC recored could be as simple as `v=DMARC1; p=reject; adkim=s; aspf=s;` 
 where:
