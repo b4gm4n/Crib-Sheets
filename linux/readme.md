@@ -1,4 +1,4 @@
-## Install ZXRDP
+## Install XRDP
 
 
 sudo apt install xrdp
@@ -13,10 +13,11 @@ not sure if needed check in next install
 sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils
 sudo adduser xrdp ssl-cert
 
-Firewall
-access from local network
-sudo ufw allow from 192.168.1.0/24 to any port 3389
-Access from anywhere
-sudo ufw allow 3389
+### Firewall
+`sudo apt install ufw` Uncomplicated Firewall  
+access from local network  
+`sudo ufw allow from 192.168.1.0/24` to any port  
+3389 Access from anywhere `sudo ufw allow 3389`  
+`sudo ufw enable`  
 
 ### Look into XtoGO
