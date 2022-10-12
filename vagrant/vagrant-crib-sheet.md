@@ -44,6 +44,7 @@ Be sure that you are in the same directory as the Vagrantfile when running these
 - `vagrant push`                  -- yes, vagrant can be configured to [deploy code](http://docs.vagrantup.com/v2/push/index.html)!
 - `vagrant up --provision | tee provision.log`  -- Runs `vagrant up`, forces provisioning and logs all output to a file
 - `vagrant plugin install vagrant-vbguest` or `vagrant vbguest` plugin to install guest additions
+- `sudo passwd root`              -- not a vagrant command but don't forget to set a pass for root on downloaded vagrant boxes else you cannot elevate to root.
 
 # Plugins
 - [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) : `$ vagrant plugin install vagrant-hostsupdater` to update your `/etc/hosts` file automatically each time you start/stop your vagrant box.
