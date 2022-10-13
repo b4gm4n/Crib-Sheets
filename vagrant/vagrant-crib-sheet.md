@@ -1,4 +1,5 @@
-# Getting started
+# Getting started  
+
 Typing `vagrant` from the command line will display a list of all available commands.
 
 Be sure that you are in the same directory as the Vagrantfile when running these commands!
