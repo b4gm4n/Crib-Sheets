@@ -1,41 +1,50 @@
+# Getting started
 Typing `vagrant` from the command line will display a list of all available commands.
 
 Be sure that you are in the same directory as the Vagrantfile when running these commands!
 
-# Creating a VM
+## Creating a VM  
+
 - `vagrant init`           -- Initialize Vagrant with a Vagrantfile and ./.vagrant directory, using no specified base image. Before you can do vagrant up, you'll need to specify a base image in the Vagrantfile.
 - `vagrant init <boxpath>` -- Initialize Vagrant with a specific box. To find a box, go to the [public Vagrant box catalog](https://app.vagrantup.com/boxes/search). When you find one you like, just replace boxpath with it's name. For example, `vagrant init ubuntu/trusty64`.
 
-# Starting a VM
+## Starting a VM  
+
 - `vagrant up`                  -- starts vagrant environment (also provisions only on the FIRST vagrant up)
 - `vagrant resume`              -- resume a suspended machine (vagrant up works just fine for this as well)
 - `vagrant provision`           -- forces reprovisioning of the vagrant machine
 - `vagrant reload`              -- restarts vagrant machine, loads new Vagrantfile configuration
 - `vagrant reload --provision`  -- restart the virtual machine and force provisioning
 
-# Getting into a VM
+## Getting into a VM  
+
 - `vagrant ssh`           -- connects to machine via SSH
 - `vagrant ssh <boxname>` -- If you give your box a name in your Vagrantfile, you can ssh into it with boxname. Works from any directory.
 
-# Stopping a VM
+## Stopping a VM  
+
 - `vagrant halt`        -- stops the vagrant machine listed in vagrantfile, or `vagrant halt <name|id>`
 - `vagrant suspend`     -- suspends a virtual machine (remembers state)
 
-# Cleaning Up a VM
+## Cleaning Up a VM  
+
 - `vagrant destroy`     -- stops and deletes all traces of the vagrant machine
 - `vagrant destroy -f`   -- same as above, without confirmation
 
-# Boxes
+## Boxes  
+
 - `vagrant box list`              -- see a list of all installed boxes on your computer
 - `vagrant box add <name> <url>`  -- download a box image to your computer
 - `vagrant box outdated`          -- check for updates vagrant box update
 - `vagrant box remove <name>`   -- deletes a box from the machine
 - `vagrant package`               -- packages a running virtualbox env in a reusable box
 
-# Saving Progress
+## Saving Progress  
+
 -`vagrant snapshot save [options] [vm-name] <name>` -- vm-name is often `default`. Allows us to save so that we can rollback at a later time
 
-# Tips
+## Tips  
+
 - `vagrant -v`                    -- get the vagrant version
 - `vagrant status`                -- outputs status of the vagrant machine
 - `vagrant global-status`         -- outputs status of all vagrant machines
@@ -46,14 +55,19 @@ Be sure that you are in the same directory as the Vagrantfile when running these
 - `vagrant plugin install vagrant-vbguest` or `vagrant vbguest` plugin to install guest additions
 - `sudo passwd root`              -- not a vagrant command but don't forget to set a pass for root on downloaded vagrant boxes else you cannot elevate to root.
 
-# Plugins
+## Plugins  
+
 - [vagrant-hostsupdater](https://github.com/cogitatio/vagrant-hostsupdater) : `$ vagrant plugin install vagrant-hostsupdater` to update your `/etc/hosts` file automatically each time you start/stop your vagrant box.
 
-# VB Guest additions
-DRAFT - these are dabblings trying to solve the version differences between host and guest
-### Vagrantfile
+## VB Guest additions  
+
+DRAFT - these are dabblings trying to solve the version differences between host and guest  
+
+## Vagrantfile  
+
 - config.vbguest.iso_path = "https://download.virtualbox.org/virtualbox/6.1.38/VBoxGuestAdditions_6.1.38.iso" --enter in vagrant file
 - config.vbguest.iso_path = "./VBoxGuestAdditions_6.1.38.iso" -- if copied to vagrant file folder
 
-# Notes
+## Notes  
+
 - If you are using [VVV](https://github.com/varying-vagrant-vagrants/vvv/), you can enable xdebug by running `vagrant ssh` and then `xdebug_on` from the virtual machine's CLI.
