@@ -1,5 +1,7 @@
 # Shortcuts  
 
+[see](https://code.visualstudio.com/docs/getstarted/keybindings)  
+
 Move Code `Alt+Up/Down`  
 Create Collapsible Region `Ctrl+M+H/Ctrl+M+U`  
 Comment Code Block `Ctrl+K+C/Ctrl+K+U`  
