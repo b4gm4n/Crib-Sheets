@@ -1,6 +1,7 @@
 # Shortcuts  
 
 [see](https://code.visualstudio.com/docs/getstarted/keybindings)  
+[list of shortcuts](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)  
 
 Move Code `Alt+Up/Down`  
 Create Collapsible Region `Ctrl+M+H/Ctrl+M+U`  
