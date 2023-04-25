@@ -53,9 +53,10 @@ Run as administrator
     `shutdown /r /fw /f /t 0` ~ /r restart /fw go into bios /t time out  
 
 
-System file checker
+### System file checker
+
     `sfc /scannow` ~ will probably not fix anything until below dism is run to update the system image files.
-Deployment Image Servicing and Management tool   
+Deployment Image Servicing and Management tool
     `dism /online /cleanup-image /checkhealth` ~ will check image for issues
     `dism /online /cleanup-image /scanhealth` ~ deeper scan
     `dism /online /cleanup-image /restorehealth` ~ yep restores it
