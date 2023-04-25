@@ -54,8 +54,10 @@ Run as administrator
 
 
 System file checker
-    `sfc /scannow`
+    `sfc /scannow` ~ will probably not fix anything until below dism is run to update the system image files.
 Deployment Image Servicing and Management tool   
-    `dism /online /cleanup-image /checkhealth` ~ quick scan
-    `dism /online /cleanup-image /scanhealth` ~ deepter scan
+    `dism /online /cleanup-image /checkhealth` ~ will check image for issues
+    `dism /online /cleanup-image /scanhealth` ~ deeper scan
     `dism /online /cleanup-image /restorehealth` ~ yep restores it
+    if image files cannot be used create iso download with windows media creation tool and run below example
+    `dism /online /cleanup-image /restorehealth /source:e:\source\install.esd /limitaccess`
